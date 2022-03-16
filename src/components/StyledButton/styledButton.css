@@ -1,0 +1,16 @@
+.styled-button {
+  padding: 0.35rem 1rem;
+  font-size: 1.25rem;
+  background-color: #009578;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  color: #f0f0f0;
+  font-family: "PT Sans";
+  min-width: 10%;
+}
+
+.styled-button:disabled {
+  background-color: hsl(168, 9%, 31%);
+  color: #999999;
+}

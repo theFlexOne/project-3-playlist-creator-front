@@ -1,0 +1,7 @@
+.styled-text-field {
+  padding: 0.2em 0.7em;
+  font: 1.25em Montserrat;
+  font-weight: 500;
+  border-radius: 20px;
+  width: 30%;
+}

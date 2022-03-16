@@ -1,0 +1,16 @@
+.records {
+  flex-grow: 1;
+  flex-basis: 33%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  list-style: none;
+  gap: 1em;
+}
+
+.record {
+  border: 1.5px solid black;
+  padding: 0.75rem 0.5rem;
+}

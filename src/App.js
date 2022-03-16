@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import useBackend from "./hooks/useBackend";
+import Header from "./components/Header/Header";
+import AppRoutes from "./routes/AppRoutes";
+import { Navigate, Route, Routes } from "react-router-dom";
+import MyMusic from "./pages/myMusic/MyMusic";
 
 function App() {
+  const [tabs, setTabs] = useState(null);
+
+  const backend = useBackend();
+
+  useEffect(() => {
+    backend
+      .fetchAvailableModels()
+      .then((models) => setTabs(models))
+      .catch((err) => console.warn(err.message));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <AppRoutes tabs={tabs} />
     </div>
   );
 }

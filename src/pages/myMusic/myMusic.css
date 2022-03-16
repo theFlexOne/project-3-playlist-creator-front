@@ -1,0 +1,25 @@
+.main-content {
+  /* margin-top: auto; */
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1; */
+}
+
+.page-content {
+  display: flex;
+  padding: 0.5em;
+  gap: 0.5em;
+}
+
+.input-heading {
+  font-size: 1.5rem;
+  font-family: Montserrat;
+}
+
+.input-wrapper {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
